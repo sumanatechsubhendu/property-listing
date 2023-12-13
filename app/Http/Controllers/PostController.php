@@ -90,6 +90,7 @@ class PostController extends Controller
     {
         $data = Request::validate([
                 'title' => ['required', 'max:90'],
+                'slug' => ['required', 'max:90'],
                 'description' => ['required'],
             ]);
         $post->update($data);
