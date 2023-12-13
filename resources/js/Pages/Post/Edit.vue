@@ -104,6 +104,13 @@ export default {
         editPost() {
             this.form.put(route("posts.update", this.post.id));
         },
+        convertToSlug() {
+            // Convert title to slug
+            this.form.slug = this.form.title
+                .toLowerCase()
+                .replace(/ /g, '-') // Replace spaces with hyphens
+                .replace(/[^\w-]+/g, ''); // Remove non-word characters except hyphens
+        },
     },
 };
 </script>
