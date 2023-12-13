@@ -81,14 +81,12 @@
 
 <script>
 import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
-import Form from "@/Pages/Post/Partials/form.vue";
 import { Head } from "@inertiajs/inertia-vue3";
 import { useForm } from "@inertiajs/inertia-vue3";
 export default {
     components: {
         BreezeAuthenticatedLayout,
         Head,
-        Form
     },
     setup() {
         const form = useForm({
